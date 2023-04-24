@@ -1,0 +1,15 @@
+.comment {
+    display: flex;
+    align-items: center;
+    margin-bottom: 1rem;
+  }
+  
+  .comment-username {
+    font-weight: bold;
+    margin-right: 1rem;
+  }
+  
+  .comment-content {
+    font-size: 0.9rem;
+  }
+  
