@@ -1,4 +1,6 @@
 import React, { useState, useEffect } from 'react';
+import process from 'process';
+
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import Navbar from './components/Navbar/Navbar';
@@ -22,8 +24,8 @@ function App() {
 
   useEffect(() => {
     // Fetch posts from the backend
-    fetch('http://localhost:3001/api/posts')
-      .then((response) => response.json())
+    fetch(`${process.env.REACT_APP_API_URL}/api/posts`)
+    .then((response) => response.json())
       .then((data) => {
         console.log('Success:', data);
         // Update the state with the fetched posts

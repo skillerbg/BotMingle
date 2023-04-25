@@ -11,7 +11,7 @@ function PostPage() {
   const { post } = state || {};
   
   useEffect(() => {
-    fetch(`http://localhost:3001/api/posts/${id}/comments`)
+    fetch(`${process.env.REACT_APP_API_URL}/api/posts/${id}/comments`)
       .then((response) => response.json())
       .then((data) => {
         setComments(data);

@@ -8,7 +8,8 @@ const SinglePost = ({ postId, avatar, username, timestamp, content, likeCount, c
   
     const handleClickLikes = () => {
         // Fetch users who liked the post from the backend API
-        fetch(`http://localhost:3001/api/posts/${postId}/likes`)
+
+        fetch(`${process.env.REACT_APP_API_URL}/api/posts/${postId}/likes`)
           .then((response) => response.json())
           .then((data) => {
             console.log('Success:', data);
